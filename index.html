@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<head>
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Khula:400,700);
+
+body{
+  background: #FDD928;
+  max-width: 900px;
+  margin: 0px auto;
+  font-family: 'Khula', sans-serif;
+  color:#4f504f;
+}
+
+#container{
+  position: relative;
+}
+
+#sections{
+  width: 340px;
+}
+
+#sections > div{
+/*  background: white; */
+  opacity: .2;
+  margin-bottom: 200px;
+}
+
+
+#sections > div:last-child{
+  margin-bottom: 10px; 
+}
+
+#sections > div.graph-scroll-active{
+  opacity: 1;
+}
+
+#graph{
+  margin-left: 40px;
+  width: 500px;
+  position: absolute;
+  top: 0px;
+  margin-left: 380px;
+}
+
+
+.graph-scroll-fixed #graph{
+  position: fixed;
+  top: 0px;
+}
+
+
+.graph-scroll-below #graph{
+  bottom: 0px;
+  top: auto;
+}
+
+
+@media (max-width: 925px)  {
+  #graph{
+    width: 100%;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+
+  #sections{
+    position: relative;
+    margin: 0px auto;
+    padding-top: 400px;
+  }
+
+  #sections div{
+/*    background: rgba(255,255,255,.5); */
+    background: rgba(253,217,40,.7);
+    padding: 10px;
+    /* border: 1px solid; */
+    max-width: 400px;
+    margin-bottom: 500px;
+  }
+}
+
+h1{
+  margin: 50px;
+}
+
+h1, h3{
+  text-align: center;
+}
+
+
+svg{
+border: 1px solid black;
+}
+
+
+.bar {
+        fill: #4f504f;
+    }
+
+img{
+width: 100%;
+height: auto; 
+/*
+width:100%; 
+
+margin-left: auto;
+margin-right: auto;
+
+display: block;
+*/
+}
+
+text {
+  font-family: 'Khula', sans-serif;
+        font-size: 14px;
+        fill: #4f504f;
+        font-weight: bold;
+    }
+
+text.footnote{
+          font-size:14px;
+          font-weight: normal;
+     }
+
+
+text.value {
+        fill: #FDD928;
+        opacity:1;
+    }
+
+text.title {
+          font-size:16px;
+          font-weight: bold;
+          line-height:20px;
+    }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #4f504f;
+  stroke-width: 0px;
+  shape-rendering: crispEdges;
+}
+
+.ground-label {
+           font-family: Khula;
+           color: #FDD928;
+           fill: #FDD928;
+           font-weight: bold;
+        }
+
+a { 
+  color: #4f504f;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <h1>BAT FIRST OR FIELD? THE CHOICES TEAMS MAKE IN TEST CRICKET</h1>
+    <h3>&dArr; SCROLL DOWN TO BEGIN  &dArr;</h3>
+
+<div id='container'>
+  <div id='graph'></div>
+  <div id='sections'>
+    
+    <!-- SEC 1 -->
+        <div><p>If you're playing Test cricket in the subcontinent and you win the toss, the prevailing wisdom is that you bat first. But what do teams choose to do in other countries around the world? Are teams deciding to bat first more than they used to? We use data from more than 1,000 matches over 25 years of Test matches to answer these questions.</p></div>
+
+    <!-- SEC 2 -->
+        <div><h1>WHERE DO TEAMS LIKE BATTING FIRST?</h1></div>
+
+    <!-- SEC 3 -->
+        <div><p>If we look at the countries where teams bat first after winning the toss, you see some surprising names high up in the list. Seeing India on top isn't much of a shock—of the 110 Test matches played in India from 1991 to 2016, teams opted to bat first in 101 of them, or 92%. What is surprising is seeing Australia up there in the midst of all the South Asian countries.</p></div> 
+
+    <!-- SEC 4 -->
+        <div><p>Of the 149 Test matches played from 1991 to 2016 in Australia, the team winning the toss decided to bat first in 110 of them, or 74%. So why do teams prefer to bat first in Test matches in Australia? XXXXXXXXXXX SOMETHING ON AUSTRALIAN PITCHES XXXXXX</p></div>
+    
+    <!-- SEC 5 -->
+    <div><h1>WIN THE TOSS, WIN THE TEST?</h1></div>
+
+    <!-- SEC 6 -->
+        <div><p>Looking at the win-loss records of teams winning the toss in different countries, we see that winning the toss hasn't been much of an advantage in New Zealand. Of the 103 Test matches played in New Zealand from 1991 to 2016, teams that won the toss have won just 32 Tests, or 31%. So what is it about playing Test cricket in New Zealand?</p></div>
+
+    <!-- SEC 7 -->
+        <div><p>Now the Basin Reserve ground in the city of Wellington has hosted 33 of those 103 Test matches and the Eden Park ground in Auckland hosted 17. Do conditions at these New Zealand grounds in a way make results unpredictable? EXPLANATION OF WHAT THIS NZ IMAGE IS ALL ABOUT HERE. --  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem. lorem ipsum lorem ipsum lorem ipsum</p></div>
+
+
+    <!-- SEC 8 -->
+        <div><h1>HOW OFTEN DO TEAMS BAT FIRST?</h1></div>
+
+    <!-- SEC 9 -->
+        <div><p>This chart looks at team strategies by finding how often a team has decided to bat first after winning the toss. Team choices over two 13-year periods are compared, viz. 1991-2003 and 2004-2016. Over the past 13 years, the Australian team has liked batting first so much that, out of every 10 matches where it won the toss, it chose to bat first in 9 of them.</p></div>
+
+
+    <!-- SEC 10 -->
+        <div><p>To finish off, we look at how often teams have won the toss over the past 26 years. We see Zimbabwe has been the luckiest team, winning the toss in 57% of its matches. Zimbabwe's position probably has more to do with the fewer matches it's played, 101, compared to the other teams. The more you play, the closer your toss record gets to 50%.</p></div>
+
+     
+  </div>
+
+</div>
+
+<!-- PUT LINK TO GITHUB REPO BELOW -->
+        <h3 id='source'><a href='https://FILL IN RIGHT LINK'>CREDITS, CODE AND DATA</a></h3>
+
+<script src="scripts/d3v4+jetpack.js"></script> 
+<script src="scripts/graph-scroll.js"></script>
+ <script src="scripts/d3-geo.v1.min.js"></script>
+
+<script>
+
+var oldWidth = 0
+function render(){
+
+  if (oldWidth == innerWidth) return
+  oldWidth = innerWidth 
+
+  var width = d3.select('#graph').node().offsetWidth,
+      height = innerWidth > 925 ? width : innerHeight * 0.7
+      ;     
+      //, 
+      //this sets the graph on mobile at a 7th of the height, while on desktop it'll be a square      
+
+  var svg = d3
+              .select('#graph')
+              .html('')
+              .append('svg')
+              .attrs({width: width, height: height})
+              ;
+
+function canvas_clear(){
+
+svg
+    .selectAll("*")
+    .remove();
+
+}
+
+function sec_1(){      //INTRO IMAGE w/ headline and intro alongside
+                
+                canvas_clear();
+
+//the code for embedding an svg came from http://stackoverflow.com/questions/21209549/embed-and-refer-to-an-external-svg-via-d3-and-or-javascript
+
+d3.xml("graphics/1_toss_for_d3.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0];
+
+svg
+  .node()
+  .appendChild(svg_node)
+  ;
+
+
+        d3
+           .select("path#path5161")
+           .attr("fill", "#4f504f")
+           .attr("fill-opacity","0")
+           .transition()
+              .duration(1500)
+              .attr("fill-opacity","1")
+              ;
+
+});
+
+
+/*
+
+svg
+    .append('svg:image')
+     .attr('xlink:href','graphics/1_toss_for_d3.png')
+      .attr('width', width)
+      .attr('height', auto)
+     ;
+
+*/
+
+}
+
+function sec_2(){   //win toss, bat first? image w/ headline on side
+
+                canvas_clear();
+
+
+d3.xml("graphics/2_bat_first_alt.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+ 
+var svg_node = xml
+                .getElementsByTagName("svg")[0];
+
+svg
+  .node()
+  .appendChild(svg_node);
+
+          d3
+           .select("path#path5099")
+           .attr("fill", "#4f504f")
+           .attr("fill-opacity","0")
+           .transition()
+              .duration(1500)
+              .attr("fill-opacity","1")
+              ;
+
+/*
+var inner_svg = svg
+                    .select("svg")
+                    ;
+
+inner_svg
+          .attr('width', width)
+          .attr('height', auto)
+         ;
+*/
+
+
+});
+
+/*
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/3_test_victory.png')
+                     .attr('width', width)
+                      .attr('height', auto)
+                     ;
+
+*/
+
+}
+
+function sec_3(){   //win toss, bat first? chart by host country w/ explanation on side
+
+
+                canvas_clear();
+
+d3.csv("data/d3_05_alt_version_venue_country_won_toss_bat_first_percent.csv", function(error, data) {
+
+//sort code from https://bl.ocks.org/anonymous/e88acea4307a96d5e267daaf737192e6
+
+var margin = {top: 70, right: 10, bottom: 20, left: 160},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
+
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleBand().range([height, 0]);
+
+var g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+data.sort(function(a, b) {
+        return a.won_toss_bat_percent-b.won_toss_bat_percent;
+      });
+
+    x.domain([0, d3.max(data, function(d) { return d.won_toss_bat_percent; })]);
+    y.domain(data.map(function(d) { return d.venue_country; }))
+      .padding(0.1)
+      ;
+
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+
+svg
+    .append('text')
+    .attr('class','title')
+    .attr('y', 20)
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    //.tspans(function(d) {return d3.wordwrap("Percent of Test matches in a country where teams that won the toss decided to bat first", 30);})  // break line after XX characters
+    //.text('Percent of Test matches in a country where teams that won the toss decided to bat first')
+    .text("For teams that won the toss playing in country X, in what % of matches did they decide to bat first?")
+    .call(wrap, 320)
+    ;
+
+svg
+    .append('text')
+    .attr('class','footnote')
+    .attr('y', +svg.attr("height")-10) //height + 50
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
+    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    ;
+
+    g.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y));
+
+    bar = g
+            .selectAll(".bar")
+            .data(data)
+            .enter()
+            ;
+
+      bar
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("height", y.bandwidth())
+        .attr("width", 0)
+        .attr("y", function(d) { return y(d.venue_country); })
+        .transition()
+          .duration(function (d, i) { return (i*300); })
+          .attr("width", function(d, i) { return x(d.won_toss_bat_percent); });
+
+      bar
+        .append('text')
+        .attr("class","value")
+        .attr("x", function(d) { return x(d.won_toss_bat_percent) - 35; })
+        .attr("y", function(d) { return y(d.venue_country) + y.bandwidth()/2; })
+        .attr("dy",".35em")
+        .text(function(d) { return (d3.format(".0f")(d.won_toss_bat_percent) +" %"); })
+        ;
+
+});
+
+}
+
+function sec_4(){  //win toss, bat first? AUS image w/ explanation on side
+
+    canvas_clear();
+
+
+                      
+d3.json("maps/australia.geojson", function (json) {
+
+var margin = {top: 50, right: 15, bottom: 5, left: 15},
+    w = +svg.attr("width") - margin.left - margin.right,
+    h = +svg.attr("height") - margin.top - margin.bottom;
+
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+ //                   .attr("x", 10)
+//                    .attr("x", x)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 50)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+svg
+    .append('text')
+    .attr('class','title')
+    .attr('y', 20)
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    //do some transform-translate magic here to center the title
+    //.tspans(function(d) {return d3.wordwrap("Major Test cricket grounds in Australia", 45);})  // break line after XX characters
+    .text("Major Test cricket grounds in Australia")
+    .call(wrap, 280)
+    //.attr('x', function(){return (width-320)/2;})
+    //.attr("x","300")
+    ;
+
+ 
+var map = svg
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .attr("width", w)
+            .attr("height", h)
+            ;
+
+var proj = d3
+              .geoMercator()
+              .fitSize([w, h], json);
+
+var pathx = d3
+              .geoPath()
+              .projection(proj);
+      
+      map
+        .selectAll("path")
+        .data(json.features)
+        .enter()
+            .append("path")
+            .attr("d", pathx)
+            .style('fill','#fdd928')
+            .style("stroke", "#4f504f")
+            .style("opacity","1")
+            .style("stroke-width", "2px")
+            ;
+
+//this part of the code from http://www.d3noob.org/2013/03/a-simple-d3js-map-explained.html
+
+d3.csv("maps/d3_06_stadiums_aus.csv", function(error, data) {
+        map
+          .selectAll("circle")
+           .data(data)
+           .enter()
+           .append("circle")
+           .attr("cx", function(d) {
+                   return proj([d.lon, d.lat])[0];
+           })
+           .attr("cy", function(d) {
+                   return proj([d.lon, d.lat])[1];
+           })
+           .attr("r", 7)
+           .style("fill", "#4f504f")
+            .style("opacity","0")
+            .transition()
+                    .duration(1500)
+                    .style("opacity","1")
+                 //.style('stroke', '#4f504f')
+                 //.style('stroke-width','2px')
+                 ;
+
+
+
+//the code below is for generating backgrounds of the text labels, it's from http://stackoverflow.com/questions/42327183/d3-tick-with-background and http://stackoverflow.com/questions/15500894/background-color-of-text-in-svg
+
+  var filter = map
+                  .append("defs")
+                  .append("filter")
+                  .attr("x", "0")
+                  .attr("y", "0")
+                  .attr("width", "1")
+                  .attr("height", "0.8")
+                  .attr("id", "background");
+
+                filter
+                  .append("feFlood")
+                  .attr("flood-color", "#4f504f");
+                
+                filter
+                  .append("feComposite")
+                  .attr("in", "SourceGraphic");
+
+        map
+          .selectAll(".ground-label")
+           .data(data)
+           .enter()
+           .append("text")
+           .attr('classed','ground-label')
+           .attr("transform", function(d) { return "translate(" + proj([d.lon, d.lat]) + ")"; })
+           //.attr("x", function(d) { return d.lon < 134 ? 6 : -6; })
+           .attr("dy", "0.30em")
+           .style("text-anchor", function(d) { return d.lon < 134 ? "start" : "end"; })
+           //.style("font-weight","bold")
+           .style("fill","#FDD928")
+           .attr("dx", function(d) { return d.lon < 134 ? "0.6em" : "-0.6em"; })
+           //.tspans(function(d) {return d3.wordwrap(function(d) { return d.ground_short; }, 45);})
+           .text(function(d) { return d.ground_short; })
+           //.call(wrap, 200)
+           .attr("filter","url(#background)")
+           .style("opacity","0")
+           .transition()
+              .duration(1500)
+              .style("opacity","1")
+           ;
+
+//this code snippet for label arrangement from Lars Kothoff, http://bl.ocks.org/larskotthoff/11406992
+
+function arrangeLabels() {
+  var move = 1;
+  while(move > 0) {
+    move = 0;
+    svg.selectAll(".ground-label")
+       .each(function() {
+         var that = this,
+             a = this.getBoundingClientRect();
+         svg.selectAll(".ground-label")
+            .each(function() {
+              if(this != that) {
+                var b = this.getBoundingClientRect();
+                if((Math.abs(a.left - b.left) * 2 < (a.width + b.width)) &&
+                   (Math.abs(a.top - b.top) * 2 < (a.height + b.height))) {
+                  // overlap, move labels
+                  var dx = (Math.max(0, a.right - b.left) +
+                           Math.min(0, a.left - b.right)) * 0.01,
+                      dy = (Math.max(0, a.bottom - b.top) +
+                           Math.min(0, a.top - b.bottom)) * 0.02,
+                      tt = d3.transform(d3.select(this).attr("transform")),
+                      to = d3.transform(d3.select(that).attr("transform"));
+                  move += Math.abs(dx) + Math.abs(dy);
+                
+                  to.translate = [ to.translate[0] + dx, to.translate[1] + dy ];
+                  tt.translate = [ tt.translate[0] - dx, tt.translate[1] - dy ];
+                  d3.select(this).attr("transform", "translate(" + tt.translate + ")");
+                  d3.select(that).attr("transform", "translate(" + to.translate + ")");
+                  a = this.getBoundingClientRect();
+                }
+              }
+            });
+       });
+  }
+} 
+
+arrangeLabels(); 
+
+}); 
+
+});
+
+}
+
+
+function sec_5(){    //win toss, win test? image w/ headline on side
+
+               canvas_clear();
+
+d3.xml("graphics/3_test_victory.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+ 
+var svg_node = xml
+                .getElementsByTagName("svg")[0];
+
+svg
+  .node()
+  .appendChild(svg_node);
+
+        d3
+           .select("path#path18")
+           .attr("fill", "#4f504f")
+           .attr("fill-opacity","0")
+           .transition()
+              .duration(1500)
+              .attr("fill-opacity","1")
+              ;
+
+/*
+var inner_svg = svg
+                    .select("svg")
+                    ;
+
+inner_svg
+          .style('width', width)
+          .style('height', auto)
+         ;
+*/
+
+});
+
+/*
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/3_test_victory.png')
+                     .attr('width', width)
+                      .attr('height', auto)
+                     ;
+
+*/
+
+}
+
+function sec_6(){  //win toss, win test? chart by host country w/ explanation on side  
+
+  canvas_clear();
+
+//lot of the bar chart code borrowed from https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998 and http://bl.ocks.org/juan-cb/faf62e91e3c70a99a306
+
+d3.csv("data/d3_02_toss_won_match_won_venue.csv", function(error, data) {
+
+//sort code from https://bl.ocks.org/anonymous/e88acea4307a96d5e267daaf737192e6
+
+var margin = {top: 70, right: 10, bottom: 20, left: 160},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
+
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleBand().range([height, 0]);
+
+var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+                    //.attr("x", 10)
+                    //.attr("x", function(){ return (+svg.attr("width") - width)/2};)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+svg
+    .append('text')
+    .attr('class','title')
+    .attr('y', 20) //20
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    //.tspans(function(d) {return d3.wordwrap("Percent of Test matches in a country won by teams that won the toss", 30);})  // break line after XX characters
+    //.text("Percent of Test matches in a country won by teams that won the toss")
+    .text("For teams that won the toss playing in country X, what % of Test matches did they win?")
+    .call(wrap, 320)
+    ;
+
+svg
+    .append('text')
+    .attr('class','footnote')
+    .attr('y', +svg.attr("height")-10) //height + 65
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
+    ;
+
+data.sort(function(a, b) {
+        return a.toss_won_match_won_percent-b.toss_won_match_won_percent;
+      });
+
+    x.domain([0, d3.max(data, function(d) { return d.toss_won_match_won_percent; })]);
+    y.domain(data.map(function(d) { return d.venue_country; }))
+      .padding(0.1)
+      ;
+
+
+    g.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y));
+
+
+    bar = g
+            .selectAll(".bar")
+            .data(data)
+            .enter()
+            ;
+
+      bar
+        .append("rect")
+        .attr("class", "bar")
+        .attr("height", y.bandwidth())
+        .attr("x", 0)
+        .attr("width", 0)
+        .attr("y", function(d) { return y(d.venue_country); })
+        //the animation code below from 
+        //http://bl.ocks.org/alexanderGugel/8b42c782ce8862cfe5e6
+        .transition()
+          .duration(function (d, i) { return (i*300); })
+          .attr("width", function(d, i) { return x(d.toss_won_match_won_percent); });
+
+      bar
+        .append('text')
+        .attr("class","value")
+        .attr("x", function(d) { return x(d.toss_won_match_won_percent) - 35; })
+        .attr("y", function(d) { return y(d.venue_country) + y.bandwidth()/2; })
+        .attr("dy",".35em")
+        .text(function(d) { return (d3.format(".0f")(d.toss_won_match_won_percent) +" %"); })
+        ;
+
+});
+
+} 
+
+
+function sec_7(){  //win toss, win test? NZ image w/ explanation on side
+
+                canvas_clear();
+
+
+                      
+d3.json("maps/new_zealand.geojson", function (json) {
+
+var margin = {top: 50, right: 15, bottom: 5, left: 15},
+    w = +svg.attr("width") - margin.left - margin.right,
+    h = +svg.attr("height") - margin.top - margin.bottom;
+
+//code below from http://stackoverflow.com/questions/24784302/wrapping-text-in-d3 and https://bl.ocks.org/mbostock/7555321
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 50)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+
+
+svg
+    .append('text')
+    .attr('class','title')
+    .attr('y', 20)
+    //.attr('x', margin.left)
+    //.style("text-anchor", "start" )
+    //do some transform-translate magic here to center the title
+    .text("Major Test cricket grounds in New Zealand")
+    .call(wrap, 280)
+    //.tspans(function(d) {return d3.wordwrap("Major Test cricket grounds in New Zealand", 45);})  // break line after XX characters
+    //.style("text-anchor","end")
+    ;
+ 
+var map = svg
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .attr("width", w)
+            .attr("height", h)
+            ;
+
+var proj = d3
+              .geoMercator()
+              .fitSize([w, h], json);
+
+var pathx = d3
+              .geoPath()
+              .projection(proj);
+      
+      map
+        .selectAll("path")
+        .data(json.features)
+        .enter()
+            .append("path")
+            .attr("d", pathx)
+            .style('fill','#fdd928')
+            .style("stroke", "#4f504f")
+            .style("opacity","1")
+            .style("stroke-width", "2px")
+            ;
+
+//this part of the code from http://www.d3noob.org/2013/03/a-simple-d3js-map-explained.html
+
+d3.csv("maps/d3_03_stadiums_nz.csv", function(error, data) {
+        map
+          .selectAll("circle")
+           .data(data)
+           .enter()
+           .append("circle")
+           .attr("cx", function(d) {
+                   return proj([d.lon, d.lat])[0];
+           })
+           .attr("cy", function(d) {
+                   return proj([d.lon, d.lat])[1];
+           })
+           .attr("r", 7)
+           .style("fill", "#4f504f")
+            .style("opacity","0")
+            .transition()
+                    .duration(1500)
+                    .style("opacity","1")
+                 //.style('stroke', '#4f504f')
+                 //.style('stroke-width','2px')
+                 ;
+
+
+
+
+
+
+//the code below is for generating backgrounds of the text labels, it's from http://stackoverflow.com/questions/42327183/d3-tick-with-background and http://stackoverflow.com/questions/15500894/background-color-of-text-in-svg
+
+  var filter = map
+                  .append("defs")
+                  .append("filter")
+                  .attr("x", "0")
+                  .attr("y", "0")
+                  .attr("width", "1")
+                  .attr("height", "0.8")
+                  .attr("id", "background");
+
+                filter
+                  .append("feFlood")
+                  .attr("flood-color", "#4f504f");
+                
+                filter
+                  .append("feComposite")
+                  .attr("in", "SourceGraphic");
+
+        map
+          .selectAll(".ground-label")
+           .data(data)
+           .enter()
+           .append("text")
+           .attr('classed','ground-label')
+           .attr("transform", function(d) { return "translate(" + proj([d.lon, d.lat]) + ")"; })
+           //.attr("x", function(d) { return d.lon < 134 ? 6 : -6; })
+           .attr("dy", "0.30em")
+           .style("text-anchor", function(d) { return d.lon < 173 ? "start" : "end"; })
+           //.style("font-weight","bold")
+           .style("fill","#FDD928")
+           .attr("dx", function(d) { return d.lon < 173 ? "0.6em" : "-0.6em"; })
+
+
+           //.tspans(function(d) {return d3.wordwrap(function(d) { return d.ground; }, 45);})
+           .text(function(d) { return d.ground; })
+           //.call(wrap, 200)
+           .attr("filter","url(#background)")
+           .style("opacity","0")
+           .transition()
+              .duration(1500)
+              .style("opacity","1")
+           ;
+
+//this code snippet for label arrangement from Lars Kothoff, http://bl.ocks.org/larskotthoff/11406992
+
+function arrangeLabels() {
+  var move = 1;
+  while(move > 0) {
+    move = 0;
+    svg.selectAll(".ground-label")
+       .each(function() {
+         var that = this,
+             a = this.getBoundingClientRect();
+         svg.selectAll(".ground-label")
+            .each(function() {
+              if(this != that) {
+                var b = this.getBoundingClientRect();
+                if((Math.abs(a.left - b.left) * 2 < (a.width + b.width)) &&
+                   (Math.abs(a.top - b.top) * 2 < (a.height + b.height))) {
+                  // overlap, move labels
+                  var dx = (Math.max(0, a.right - b.left) +
+                           Math.min(0, a.left - b.right)) * 0.01,
+                      dy = (Math.max(0, a.bottom - b.top) +
+                           Math.min(0, a.top - b.bottom)) * 0.02,
+                      tt = d3.transform(d3.select(this).attr("transform")),
+                      to = d3.transform(d3.select(that).attr("transform"));
+                  move += Math.abs(dx) + Math.abs(dy);
+                
+                  to.translate = [ to.translate[0] + dx, to.translate[1] + dy ];
+                  tt.translate = [ tt.translate[0] - dx, tt.translate[1] - dy ];
+                  d3.select(this).attr("transform", "translate(" + tt.translate + ")");
+                  d3.select(that).attr("transform", "translate(" + to.translate + ")");
+                  a = this.getBoundingClientRect();
+                }
+              }
+            });
+       });
+  }
+} 
+
+arrangeLabels(); 
+
+}); 
+
+});
+
+}
+
+
+function sec_8(){ //toss trends over time image w/ headline on side
+
+                canvas_clear();
+
+
+d3.xml("graphics/4_hands_aloft.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+ 
+var svg_node = xml
+                .getElementsByTagName("svg")[0];
+
+svg
+  .node()
+  .appendChild(svg_node);
+
+
+          d3
+           .select("path#path14")
+           .attr("fill", "#4f504f")
+           .attr("fill-opacity","0")
+           .transition()
+              .duration(1500)
+              .attr("fill-opacity","1")
+              ;
+
+/*
+var inner_svg = svg
+                    .select("svg")
+                    ;
+
+inner_svg
+          .attr('width', width)
+          .attr('height', auto)
+         ;
+*/
+
+});
+
+/*
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/4_hands_aloft.png')
+                     .attr('width', width)
+                      .attr('height', auto)
+                     ;
+
+
+*/
+
+}
+
+function sec_9(){ //how team toss choices have changed over the years
+
+    canvas_clear();
+
+//slopegraph code borrowed from http://bl.ocks.org/benvandyke/8482820
+
+    var width = +svg.attr("width");
+    var height = +svg.attr("height"); 
+    
+    var margin = {top: 15, bottom: 10, left: 125, right: 40};
+    
+    var leftScale = d3.scaleLinear() //change from scale.linear in d3 v3
+      .domain([48, 92])
+      .range([height - margin.top, margin.bottom*5]);
+    
+    var rightScale = d3.scaleLinear() //change from scale.linear in d3 v3
+      .domain([48, 92])
+      .range([height - margin.top, margin.bottom*5]);
+    
+    var Formatter = d3.format(".0f");
+
+    var svgx = svg
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+
+    function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+
+      svgx.append("text")
+        .attr('x', function(){return (width-320)/2;})
+        //.attr("x", width / 2)  //note to self: do this for all chart titles now, 
+                    //text-anchor:middle and the x as width/2
+                    //do it that way, only if the title is short enough
+        .attr("y", margin.top)
+        .attr("class", "chart-title")
+        .text("If team X won the toss, in what % of Test matches did it choose to bat first?")
+        .style("text-anchor", "begin")
+        .call(wrap, 320)
+        ;
+    
+      var filter = svgx
+                  .append("defs")
+                  .append("filter")
+                  .attr("x", "0")
+                  .attr("y", "0")
+                  .attr("width", "1")
+                  .attr("height", "0.8")
+                  .attr("id", "background");
+
+                filter
+                  .append("feFlood")
+                  .attr("flood-color", "#4f504f");
+                
+                filter
+                  .append("feComposite")
+                  .attr("in", "SourceGraphic");
+
+
+      svgx.append("text")
+        .attr("x", margin.left)  //note to self: do this for all chart titles now, 
+                    //text-anchor:middle and the x as width/2
+        .attr("y", margin.top*4)
+        .attr("class", "axis_label")
+        .text("1991-2003")
+        .style("fill","#FDD928")
+        .style("text-anchor","middle")
+        .attr("filter","url(#background)")
+        ;
+
+      svgx.append("text")
+        .attr("x", width-margin.right)  //note to self: do this for all chart titles now, 
+                    //text-anchor:middle and the x as width/2
+        .attr("y", margin.top*4)
+        .attr("class", "axis_label")
+        .text("2004-2016")
+        .style("fill","#FDD928")
+        .style("text-anchor","middle")
+        .attr("filter","url(#background)")
+        ;
+
+    d3.csv('data/d3_11_toss_choice_trends.csv', function(d) {
+      data = d;
+      
+      var lines = svgx.selectAll("line")
+        .data(data);
+        
+      lines
+        .enter()
+        .append("line")
+        .attr("x1", margin.left) //start point
+        .attr("x2", margin.left)
+        .attr("y1", function(d) {
+          return leftScale(parseFloat(d['1991-2003']));
+        })
+        .attr("y2", function(d) {
+          return leftScale(parseFloat(d['1991-2003']));
+        })
+        .attr("stroke", "#4f504f")
+        .attr("stroke-width", 1)
+          .transition()
+            .duration(1500)
+            .attr("x2", width - margin.right) //end coordinates
+            .attr("y2", function(d) {
+             return rightScale(parseFloat(d['2004-2016']));
+        })      
+        ;
+
+      var rightLabels = svgx.selectAll(".labels")
+        .data(data);
+        
+      rightLabels.enter()
+        .append("text")
+        .attr("class","labels")
+        .attr("x", width + 5 - margin.right)
+        .attr("y", function(d) {
+          return rightScale(parseFloat(d['2004-2016'])) + 4;
+        })
+        .transition()
+        .delay(1500)
+          .text(function (d) {
+            return Formatter(d['2004-2016'])  + "%";
+        });
+      
+      var leftLabels = svgx.selectAll(".left-labels")
+        .data(data);
+        
+      leftLabels.enter()
+        .append("text")
+        .attr("class","left-labels")
+        .attr("x", margin.left-5)
+        .attr("y", function(d) {
+          return leftScale(parseFloat(d['1991-2003'])) + 4;
+        })
+        .text(function (d) {
+          return d['team'] + " " + Formatter(d['1991-2003']) + "%";
+        })
+        .style("text-anchor","end")
+        ;
+    
+    svgx
+        .append('text')
+        .attr('class','footnote')
+        .attr('y', +svg.attr("height")-5) //height + 50
+        //.attr('x', margin.left)
+        //.style("text-anchor", "start" )
+        //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
+        .text("Source: CricketArchive.com")
+    ;   
+
+    });
+
+}                  
+
+
+function sec_10(){  //bat first, win match? by host country chart w/ explanation on side
+
+  canvas_clear();
+
+d3.csv("data/d3_10_luckiest_team.csv", function(error, data) {
+
+data.sort(function(a, b) {
+        return a.toss_won_percent-b.toss_won_percent;
+      });
+
+var margin = {top: 70, right: 10, bottom: 20, left: 100},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
+
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleBand().range([height, 0]);
+
+var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("0"),
+        y = text.attr("y"),
+        dy = 0, //parseFloat(text.attr("dy")),
+        tspan = text.text(null)
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", dy + "em")
+                    ;
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text
+                    .append("tspan")
+                    //.attr("x", 10)
+                    .attr("x", (+svg.attr("width") - width)/2)
+                    .attr("y", y)
+                    .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                    .text(word)
+                    ;
+      }
+    }
+  });
+}
+
+
+svg
+    .append('text')
+    .attr('class','title')
+    .attr('y', 20)
+    //.attr('x', margin.left)
+    .text("In what % of Test matches did team X win the toss?")
+    .call(wrap, 320)
+    ;
+
+svg
+    .append('text')
+    .attr('class','footnote')
+    .attr('y', +svg.attr("height")-10) //height + 50
+    .attr('x', 10)
+    //.style("text-anchor", "start" )
+    //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
+    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    ;
+
+data.sort(function(a, b) {
+        return a.bat_first_won_percent - b.bat_first_won_percent;
+      });
+
+    x.domain([0, d3.max(data, function(d) { return d.toss_won_percent; })]);
+    y.domain(data.map(function(d) { return d.team; }))
+      .padding(0.1)
+      ;
+
+
+    g.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y));
+
+
+    bar = g
+            .selectAll(".bar")
+            .data(data)
+            .enter()
+            ;
+
+      bar
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("height", y.bandwidth())
+        .attr("y", function(d) { return y(d.team); })
+        .attr("width", 0)
+        .transition()
+          .duration(function (d, i) { return (i*300); })
+          .attr("width", function(d, i) { return x(d.toss_won_percent); });
+
+ bar
+        .append('text')
+        .attr("class","value")
+        .attr("x", function(d) { return x(d.toss_won_percent) - 35; })
+        .attr("y", function(d) { return y(d.team) + y.bandwidth()/2; })
+        .attr("dy",".35em")
+        .text(function(d) { return (d3.format(".0f")(d.toss_won_percent) +" %"); })
+        ;
+
+
+});
+
+
+
+} //sec_10 closing brace
+
+
+  var gs = d3.graphScroll()
+      .container(d3.select('#container'))
+      .graph(d3.selectAll('#graph'))
+      .sections(d3.selectAll('#sections > div'))
+      // .offset(innerWidth < 900 ? innerHeight - 30 : 200)
+      .eventId('uniqueId1')
+      .on('active', function(i){  
+              
+              [ sec_1,
+                sec_2,
+                sec_3,
+                sec_4,
+                sec_5,
+                sec_6,
+                sec_7,
+                sec_8,
+                sec_9,
+                sec_10 ][i]();
+
+})
+
+//the brace above is completed by the brace appearing before the list of function names
+
+
+d3.select('#source')
+    .styles({'margin-bottom': window.innerHeight - 450 + 'px', padding: '100px'})
+    //.style("fill","#4f504f")
+    //.style("text-decoration","none")
+    ;
+
+
+}
+//this is the brace that closes the render function
+
+render()
+d3.select(window).on('resize', render)
+
+</script>
+
+</body>
+
+</html>
