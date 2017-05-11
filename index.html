@@ -26,7 +26,7 @@ body{
 #sections > div{
 /*  background: white; */
   opacity: .2;
-  margin-bottom: 200px;
+  margin-bottom: 220px;
 }
 
 
@@ -121,7 +121,7 @@ text {
     }
 
 text.footnote{
-          font-size:14px;
+          font-size:12px;
           font-weight: normal;
      }
 
@@ -424,6 +424,7 @@ svg
     //.style("text-anchor", "start" )
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
     .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    
     ;
 
     g.append("g")
@@ -794,6 +795,7 @@ svg
     //.attr('x', margin.left)
     //.style("text-anchor", "start" )
     .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
     ;
 
@@ -1121,11 +1123,11 @@ function sec_9(){ //how team toss choices have changed over the years
     var margin = {top: 15, bottom: 10, left: 125, right: 40};
     
     var leftScale = d3.scaleLinear() //change from scale.linear in d3 v3
-      .domain([48, 92])
+      .domain([48, 95])
       .range([height - margin.top, margin.bottom*5]);
     
     var rightScale = d3.scaleLinear() //change from scale.linear in d3 v3
-      .domain([48, 92])
+      .domain([48, 95])
       .range([height - margin.top, margin.bottom*5]);
     
     var Formatter = d3.format(".0f");
@@ -1181,7 +1183,7 @@ function sec_9(){ //how team toss choices have changed over the years
                     //text-anchor:middle and the x as width/2
                     //do it that way, only if the title is short enough
         .attr("y", margin.top)
-        .attr("class", "chart-title")
+//        .attr("class", "chart-title")
         .text("If team X won the toss, in what % of Test matches did it choose to bat first?")
         .style("text-anchor", "begin")
         .call(wrap, 320)
@@ -1206,37 +1208,83 @@ function sec_9(){ //how team toss choices have changed over the years
 
 
       svgx.append("text")
-        .attr("x", margin.left)  //note to self: do this for all chart titles now, 
-                    //text-anchor:middle and the x as width/2
+        .attr("x", margin.left)  
         .attr("y", margin.top*4)
-        .attr("class", "axis_label")
+  //      .attr("class", "axis_label")
         .text("1991-2003")
         .style("fill","#FDD928")
         .style("text-anchor","middle")
         .attr("filter","url(#background)")
         ;
 
+     svgx.append("text")
+        .attr("x", margin.left)  
+        .attr("dx","-1.5em")
+        .attr("y", margin.top*5)
+  //      .attr("class", "axis_label")
+        .text("% of Test matches")
+        .style("font-size", "12px")
+        .style("fill","#4f504f")
+        .style("text-anchor","middle")
+        ;
+
+
       svgx.append("text")
-        .attr("x", width-margin.right)  //note to self: do this for all chart titles now, 
-                    //text-anchor:middle and the x as width/2
+        .attr("x", width - margin.right)  
         .attr("y", margin.top*4)
-        .attr("class", "axis_label")
+    //    .attr("class", "axis_label")
         .text("2004-2016")
         .style("fill","#FDD928")
         .style("text-anchor","middle")
         .attr("filter","url(#background)")
         ;
 
+      svgx.append("text")
+        .attr("x", width - margin.right)
+        .attr("dx","-1.5em")  
+        .attr("y", margin.top*5)
+    //    .attr("class", "axis_label")
+        .text("% of Test matches")
+        .style("font-size", "12px")
+        .style("fill","#4f504f")
+        .style("text-anchor","middle")
+        ;
+
+
+
+    svgx
+      		.append("line")
+	      	.attr("x1", margin.left)
+	      	.attr("y1", margin.top*5.5)
+	      	.attr("x2", margin.left)
+	      	.attr("y2", height-margin.bottom*2)
+	      	.attr("stroke", "#4f504f")
+	        .attr("stroke-width", 1)
+	        ;
+
+    svgx
+    	.append("line")
+      	.attr("x1", width - margin.right) 
+      	.attr("y1", margin.top*5.5)
+      	.attr("x2", width - margin.right) 
+      	.attr("y2", height-margin.bottom*2)
+      	.attr("stroke", "#4f504f")
+        .attr("stroke-width", 1)
+        ;
+
+
     d3.csv('data/d3_11_toss_choice_trends.csv', function(d) {
       data = d;
       
-      var lines = svgx.selectAll("line")
-        .data(data);
+      var lines = svgx.selectAll(".noclass")  //was initially .selectAll("line"), interfered with line axes i drew, so
+      											//added fake class called "noclass" to lines to differentiate them
+              .data(data);
         
       lines
         .enter()
         .append("line")
-        .attr("x1", margin.left) //start point
+        .attr("class","noclass") //these lines didnt have a class earlier, added them to differentiate them from the axes
+        .attr("x1", margin.left) 
         .attr("x2", margin.left)
         .attr("y1", function(d) {
           return leftScale(parseFloat(d['1991-2003']));
@@ -1259,7 +1307,7 @@ function sec_9(){ //how team toss choices have changed over the years
         
       rightLabels.enter()
         .append("text")
-        .attr("class","labels")
+//        .attr("class","labels")
         .attr("x", width + 5 - margin.right)
         .attr("y", function(d) {
           return rightScale(parseFloat(d['2004-2016'])) + 4;
@@ -1275,7 +1323,7 @@ function sec_9(){ //how team toss choices have changed over the years
         
       leftLabels.enter()
         .append("text")
-        .attr("class","left-labels")
+      //  .attr("class","left-labels")
         .attr("x", margin.left-5)
         .attr("y", function(d) {
           return leftScale(parseFloat(d['1991-2003'])) + 4;
@@ -1294,6 +1342,7 @@ function sec_9(){ //how team toss choices have changed over the years
         //.style("text-anchor", "start" )
         //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
         .text("Source: CricketArchive.com")
+        
     ;   
 
     });
@@ -1378,6 +1427,7 @@ svg
     //.style("text-anchor", "start" )
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
     .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    
     ;
 
 data.sort(function(a, b) {
@@ -1452,13 +1502,13 @@ data.sort(function(a, b) {
 
 //the brace above is completed by the brace appearing before the list of function names
 
-
+/*
 d3.select('#source')
     .styles({'margin-bottom': window.innerHeight - 450 + 'px', padding: '100px'})
     //.style("fill","#4f504f")
     //.style("text-decoration","none")
     ;
-
+*/
 
 }
 //this is the brace that closes the render function
