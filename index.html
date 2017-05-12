@@ -248,7 +248,35 @@ function sec_1(){      //INTRO IMAGE w/ headline and intro alongside
                 
                 canvas_clear();
 
-//the code for embedding an svg came from http://stackoverflow.com/questions/21209549/embed-and-refer-to-an-external-svg-via-d3-and-or-javascript
+//tried adding svgs, tried the code below but the font for the page number was getting rendered wrong, went for pngs instead, seems one workaround
+// is to convert the text in inkscape/illustrator to path (object to path), then the text is saved as a shape, you won't be 
+//screwed over by different browsers rendering the font differently
+
+
+/*
+d3.xml("graphics/pg_1.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+  
+      svg
+        .node()
+        .appendChild(xml.documentElement)
+        .attr("preserveAspectRatio", "xMaxYMax meet")
+        ;
+    })
+    ;
+*/
+
+
+
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_1.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
+
+
 
 d3.xml("graphics/1_toss_for_d3_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
@@ -267,12 +295,9 @@ var svg_node = xml
 //deleted width and height attributes from the svgs, hoping it makes scaling them easier
 //opened the svgs in a text editor and deleted those attributes, got that idea from http://stackoverflow.com/questions/3120739/resizing-svg-in-html
 
-//added preserveAspectRatio="xMinYMin meet" to svg
+//added preserveAspectRatio="xMinYMin meet" to svg, forgot I could do it through code --> .attr("preserveAspectRatio", "xMinYMin meet")
 //learnt exactly what xMinyMin does from http://tutorials.jenkov.com/svg/svg-viewport-view-box.html  
-//all this doesn't matter for the d3 code here though, just putting it here as a reminder that I manually edited the svgs outside the d3 code to make the d3 code here work
-
-
-
+//all this doesn't matter for the d3 code here though, just putting it here as a reminder that I manually edited the svgs outside the d3 code to make the d3 code here work. Note to self: next time, avoid manual editing, you can add/change attributes through the code here
 
       d3
        .select("#path5161")
@@ -283,7 +308,6 @@ var svg_node = xml
           .attr("fill-opacity","1")
           ;
 
-
 });
 
 }
@@ -291,6 +315,13 @@ var svg_node = xml
 function sec_2(){   //win toss, bat first? image w/ headline on side
 
                 canvas_clear();
+
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_2.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
 
 
 d3.xml("graphics/2_bat_first_alt_min.svg", function(error, xml) {
@@ -321,6 +352,14 @@ function sec_3(){   //win toss, bat first? chart by host country w/ explanation 
 
 
                 canvas_clear();
+
+                                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_3.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
 
 d3.csv("data/d3_05_alt_version_venue_country_won_toss_bat_first_percent.csv", function(error, data) {
 
@@ -445,6 +484,13 @@ svg
 function sec_4(){  //win toss, bat first? AUS image w/ explanation on side
 
     canvas_clear();
+
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_4.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
 
 
                       
@@ -654,6 +700,14 @@ function sec_5(){    //win toss, win test? image w/ headline on side
 
                canvas_clear();
 
+                               svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_5.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
+
 d3.xml("graphics/3_test_victory_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
  
@@ -682,6 +736,14 @@ svg
 function sec_6(){  //win toss, win test? chart by host country w/ explanation on side  
 
   canvas_clear();
+
+                  svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_6.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
 
 //lot of the bar chart code borrowed from https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998 and http://bl.ocks.org/juan-cb/faf62e91e3c70a99a306
 
@@ -812,6 +874,13 @@ data.sort(function(a, b) {
 function sec_7(){  //win toss, win test? NZ image w/ explanation on side
 
                 canvas_clear();
+
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_7.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
 
 
                       
@@ -1027,6 +1096,14 @@ function sec_8(){ //toss trends over time image w/ headline on side
                 canvas_clear();
 
 
+                svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_8.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
+
 d3.xml("graphics/4_hands_aloft_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
  
@@ -1058,20 +1135,25 @@ function sec_9(){ //how team toss choices have changed over the years
 
     canvas_clear();
 
+
+
+
 //slopegraph code borrowed from http://bl.ocks.org/benvandyke/8482820
 
     var width = +svg.attr("width");
     var height = +svg.attr("height"); 
+
+
     
-    var margin = {top: 15, bottom: 10, left: 125, right: 40};
+    var margin = {top: 15, bottom: 20, left: 125, right: 40};
     
     var leftScale = d3.scaleLinear() //change from scale.linear in d3 v3
       .domain([48, 95])
-      .range([height - margin.top, margin.bottom*5]);
+      .range([height - margin.top*1.5, margin.bottom*5]);
     
     var rightScale = d3.scaleLinear() //change from scale.linear in d3 v3
       .domain([48, 95])
-      .range([height - margin.top, margin.bottom*5]);
+      .range([height - margin.top*1.5, margin.bottom*5]);
     
     var Formatter = d3.format(".0f");
 
@@ -1079,6 +1161,14 @@ function sec_9(){ //how team toss choices have changed over the years
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height);
+
+                svgx
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_9.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
 
 
     function wrap(text, width) {
@@ -1200,7 +1290,7 @@ function sec_9(){ //how team toss choices have changed over the years
 	      	.attr("x1", margin.left)
 	      	.attr("y1", margin.top*5.5)
 	      	.attr("x2", margin.left)
-	      	.attr("y2", height-margin.bottom*2)
+	      	.attr("y2", height-margin.bottom*1.5)
 	      	.attr("stroke", "#4f504f")
 	        .attr("stroke-width", 1)
 	        ;
@@ -1210,7 +1300,7 @@ function sec_9(){ //how team toss choices have changed over the years
       	.attr("x1", width - margin.right) 
       	.attr("y1", margin.top*5.5)
       	.attr("x2", width - margin.right) 
-      	.attr("y2", height-margin.bottom*2)
+      	.attr("y2", height-margin.bottom*1.5)
       	.attr("stroke", "#4f504f")
         .attr("stroke-width", 1)
         ;
@@ -1297,6 +1387,14 @@ function sec_10(){  //bat first, win match? by host country chart w/ explanation
 
   canvas_clear();
 
+                  svg
+                    .append('svg:image')
+                     .attr('xlink:href','graphics/pg_10.png')
+                     .attr('x', width-80)
+                     .attr('y', height-20)
+                     ;
+
+
 d3.csv("data/d3_10_luckiest_team.csv", function(error, data) {
 
 data.sort(function(a, b) {
@@ -1372,6 +1470,9 @@ svg
     .text("*Data from 1991 to 2016; Source: CricketArchive.com")
     
     ;
+
+
+
 
 data.sort(function(a, b) {
         return a.bat_first_won_percent - b.bat_first_won_percent;
