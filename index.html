@@ -1289,11 +1289,11 @@ function sec_9(){ //how team toss choices have changed over the years
     
     var leftScale = d3.scaleLinear() //change from scale.linear in d3 v3
       .domain([48, 95])
-      .range([height - margin.top*1.5, margin.bottom*5]);
+      .range([height - margin.top*1, margin.bottom*5]);
     
     var rightScale = d3.scaleLinear() //change from scale.linear in d3 v3
       .domain([48, 95])
-      .range([height - margin.top*1.5, margin.bottom*5]);
+      .range([height - margin.top*1, margin.bottom*5]);
     
     var Formatter = d3.format(".0f");
 
@@ -1430,7 +1430,7 @@ function sec_9(){ //how team toss choices have changed over the years
 	      	.attr("x1", margin.left)
 	      	.attr("y1", margin.top*5.5)
 	      	.attr("x2", margin.left)
-	      	.attr("y2", height-margin.bottom*1.5)
+	      	.attr("y2", height-margin.bottom*1.2)
 	      	.attr("stroke", "#4f504f")
 	        .attr("stroke-width", 1)
 	        ;
@@ -1440,7 +1440,7 @@ function sec_9(){ //how team toss choices have changed over the years
       	.attr("x1", width - margin.right) 
       	.attr("y1", margin.top*5.5)
       	.attr("x2", width - margin.right) 
-      	.attr("y2", height-margin.bottom*1.5)
+      	.attr("y2", height-margin.bottom*1.2)
       	.attr("stroke", "#4f504f")
         .attr("stroke-width", 1)
         ;
