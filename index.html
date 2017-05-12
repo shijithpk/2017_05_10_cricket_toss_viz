@@ -73,7 +73,7 @@ body{
   }
 
   #sections div{
-/*    background: rgba(255,255,255,.5); */
+    /*    background: rgba(255,255,255,.5); */
     background: rgba(253,217,40,0.9);
     padding: 10px;
     /* border: 1px solid; */
@@ -100,18 +100,20 @@ border: 1px solid black;
         fill: #4f504f;
     }
 
+/*
 img{
 width: 100%;
 height: auto; 
-/*
+
 width:100%; 
 
 margin-left: auto;
 margin-right: auto;
 
 display: block;
-*/
+
 }
+*/
 
 text {
   font-family: 'Khula', sans-serif;
@@ -251,38 +253,38 @@ function sec_1(){      //INTRO IMAGE w/ headline and intro alongside
 d3.xml("graphics/1_toss_for_d3_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
 
-
 var svg_node = xml
-                .getElementsByTagName("svg")[0];
+                .getElementsByTagName("svg")[0]
+                ;
 
-svg
-  .node()
-  .appendChild(svg_node)
-  ;
+//this line below makes the svgs a part of the svg on the page, inserts them into it
+
+				svg
+				  .node()
+				  .appendChild(svg_node)
+				  ;
+
+//deleted width and height attributes from the svgs, hoping it makes scaling them easier
+//opened the svgs in a text editor and deleted those attributes, got that idea from http://stackoverflow.com/questions/3120739/resizing-svg-in-html
+
+//added preserveAspectRatio="xMinYMin meet" to svg
+//learnt exactly what xMinyMin does from http://tutorials.jenkov.com/svg/svg-viewport-view-box.html  
+//all this doesn't matter for the d3 code here though, just putting it here as a reminder that I manually edited the svgs outside the d3 code to make the d3 code here work
 
 
-        d3
-           .select("path#path5161")
-           .attr("fill", "#4f504f")
-           .attr("fill-opacity","0")
-           .transition()
-              .duration(750)
-              .attr("fill-opacity","1")
-              ;
+
+
+      d3
+       .select("#path5161")
+       .attr("fill", "#4f504f")
+       .attr("fill-opacity","0")
+       .transition()
+          .duration(750)
+          .attr("fill-opacity","1")
+          ;
+
 
 });
-
-
-/*
-
-svg
-    .append('svg:image')
-     .attr('xlink:href','graphics/1_toss_for_d3.png')
-      .attr('width', width)
-      .attr('height', auto)
-     ;
-
-*/
 
 }
 
@@ -297,9 +299,10 @@ d3.xml("graphics/2_bat_first_alt_min.svg", function(error, xml) {
 var svg_node = xml
                 .getElementsByTagName("svg")[0];
 
-svg
-  .node()
-  .appendChild(svg_node);
+			svg
+			  .node()
+			  .appendChild(svg_node);
+
 
           d3
            .select("path#path5099")
@@ -310,29 +313,7 @@ svg
               .attr("fill-opacity","1")
               ;
 
-/*
-var inner_svg = svg
-                    .select("svg")
-                    ;
-
-inner_svg
-          .attr('width', width)
-          .attr('height', auto)
-         ;
-*/
-
-
 });
-
-/*
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/3_test_victory.png')
-                     .attr('width', width)
-                      .attr('height', auto)
-                     ;
-
-*/
 
 }
 
@@ -683,6 +664,7 @@ svg
   .node()
   .appendChild(svg_node);
 
+
         d3
            .select("path#path18")
            .attr("fill", "#4f504f")
@@ -692,28 +674,8 @@ svg
               .attr("fill-opacity","1")
               ;
 
-/*
-var inner_svg = svg
-                    .select("svg")
-                    ;
-
-inner_svg
-          .style('width', width)
-          .style('height', auto)
-         ;
-*/
 
 });
-
-/*
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/3_test_victory.png')
-                     .attr('width', width)
-                      .attr('height', auto)
-                     ;
-
-*/
 
 }
 
@@ -1085,29 +1047,10 @@ svg
               .attr("fill-opacity","1")
               ;
 
-/*
-var inner_svg = svg
-                    .select("svg")
-                    ;
 
-inner_svg
-          .attr('width', width)
-          .attr('height', auto)
-         ;
-*/
 
 });
 
-/*
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/4_hands_aloft.png')
-                     .attr('width', width)
-                      .attr('height', auto)
-                     ;
-
-
-*/
 
 }
 
@@ -1313,7 +1256,7 @@ function sec_9(){ //how team toss choices have changed over the years
           return rightScale(parseFloat(d['2004-2016'])) + 4;
         })
         .transition()
-        .delay(1500)
+        .delay(750)
           .text(function (d) {
             return Formatter(d['2004-2016'])  + "%";
         });
