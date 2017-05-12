@@ -100,21 +100,6 @@ border: 1px solid black;
         fill: #4f504f;
     }
 
-/*
-img{
-width: 100%;
-height: auto; 
-
-width:100%; 
-
-margin-left: auto;
-margin-right: auto;
-
-display: block;
-
-}
-*/
-
 text {
   font-family: 'Khula', sans-serif;
         font-size: 14px;
@@ -317,13 +302,6 @@ function sec_2(){   //win toss, bat first? image w/ headline on side
 
                 canvas_clear();
 
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_2.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
-
 
 d3.xml("graphics/2_bat_first_alt_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
@@ -373,14 +351,6 @@ function sec_3(){   //win toss, bat first? chart by host country w/ explanation 
 
 
                 canvas_clear();
-
-                                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_3.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
-
 
 d3.csv("data/d3_05_alt_version_venue_country_won_toss_bat_first_percent.csv", function(error, data) {
 
@@ -464,7 +434,7 @@ svg
     //.attr('x', margin.left)
     //.style("text-anchor", "start" )
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
-    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    .text("*Data for 1991-2016; Source: CricketArchive.com")
     
     ;
 
@@ -525,13 +495,6 @@ var svg_node = xml
 function sec_4(){  //win toss, bat first? AUS image w/ explanation on side
 
     canvas_clear();
-
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_4.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
                       
@@ -761,12 +724,6 @@ function sec_5(){    //win toss, win test? image w/ headline on side
 
                canvas_clear();
 
-                               svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_5.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
 d3.xml("graphics/3_test_victory_min.svg", function(error, xml) {
@@ -818,12 +775,6 @@ function sec_6(){  //win toss, win test? chart by host country w/ explanation on
 
   canvas_clear();
 
-                  svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_6.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
 //lot of the bar chart code borrowed from https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998 and http://bl.ocks.org/juan-cb/faf62e91e3c70a99a306
@@ -899,7 +850,7 @@ svg
     .attr('y', +svg.attr("height")-10) //height + 65
     //.attr('x', margin.left)
     //.style("text-anchor", "start" )
-    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    .text("*Data for 1991-2016; Source: CricketArchive.com")
     
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
     ;
@@ -976,12 +927,6 @@ function sec_7(){  //win toss, win test? NZ image w/ explanation on side
 
                 canvas_clear();
 
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_7.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
                       
@@ -1217,12 +1162,6 @@ function sec_8(){ //toss trends over time image w/ headline on side
                 canvas_clear();
 
 
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_8.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
 d3.xml("graphics/4_hands_aloft_min.svg", function(error, xml) {
@@ -1302,12 +1241,6 @@ function sec_9(){ //how team toss choices have changed over the years
                 .attr("width", width)
                 .attr("height", height);
 
-                svgx
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_9.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
 
@@ -1430,7 +1363,7 @@ function sec_9(){ //how team toss choices have changed over the years
 	      	.attr("x1", margin.left)
 	      	.attr("y1", margin.top*5.5)
 	      	.attr("x2", margin.left)
-	      	.attr("y2", height-margin.bottom*1.2)
+	      	.attr("y2", height-margin.bottom*1)
 	      	.attr("stroke", "#4f504f")
 	        .attr("stroke-width", 1)
 	        ;
@@ -1440,7 +1373,7 @@ function sec_9(){ //how team toss choices have changed over the years
       	.attr("x1", width - margin.right) 
       	.attr("y1", margin.top*5.5)
       	.attr("x2", width - margin.right) 
-      	.attr("y2", height-margin.bottom*1.2)
+      	.attr("y2", height-margin.bottom*1)
       	.attr("stroke", "#4f504f")
         .attr("stroke-width", 1)
         ;
@@ -1468,7 +1401,7 @@ function sec_9(){ //how team toss choices have changed over the years
         .attr("stroke", "#4f504f")
         .attr("stroke-width", 1)
           .transition()
-            .duration(750)
+            .duration(500)
             .attr("x2", width - margin.right) //end coordinates
             .attr("y2", function(d) {
              return rightScale(parseFloat(d['2004-2016']));
@@ -1486,7 +1419,7 @@ function sec_9(){ //how team toss choices have changed over the years
           return rightScale(parseFloat(d['2004-2016'])) + 4;
         })
         .transition()
-        .delay(750)
+        .delay(500)
           .text(function (d) {
             return Formatter(d['2004-2016'])  + "%";
         });
@@ -1547,12 +1480,6 @@ function sec_10(){  //bat first, win match? by host country chart w/ explanation
 
   canvas_clear();
 
-                  svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_10.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
 
 
 d3.csv("data/d3_10_luckiest_team.csv", function(error, data) {
@@ -1627,7 +1554,7 @@ svg
     .attr('x', 10)
     //.style("text-anchor", "start" )
     //.tspans(function(d) {return d3.wordwrap("Source: CricketArchive.com", 45);})  // break line after XX characters
-    .text("*Data from 1991 to 2016; Source: CricketArchive.com")
+    .text("*Data for 1991-2016; Source: CricketArchive.com")
     
     ;
 
