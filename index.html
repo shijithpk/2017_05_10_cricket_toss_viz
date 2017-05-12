@@ -248,37 +248,6 @@ function sec_1(){      //INTRO IMAGE w/ headline and intro alongside
                 
                 canvas_clear();
 
-//tried adding svgs, tried the code below but the font for the page number was getting rendered wrong, went for pngs instead, seems one workaround
-// is to convert the text in inkscape/illustrator to a shape (object to path), then you won't be 
-//screwed over by different browsers rendering the font differently
-//since the page no. image will be same size for both mobile/desktop, it's ok this time, but if there's any re-scaling involved
-//between desktop and mobile, please use svgs instead
-
-
-/*
-d3.xml("graphics/pg_1.svg", function(error, xml) {
-        if (error) {console.log(error); return;}
-  
-      svg
-        .node()
-        .appendChild(xml.documentElement)
-        .attr("preserveAspectRatio", "xMaxYMax meet")
-        ;
-    })
-    ;
-*/
-
-
-
-                svg
-                    .append('svg:image')
-                     .attr('xlink:href','graphics/pg_1.png')
-                     .attr('x', width-80)
-                     .attr('y', height-20)
-                     ;
-
-
-
 
 d3.xml("graphics/1_toss_for_d3_min.svg", function(error, xml) {
         if (error) {console.log(error); return;}
@@ -289,6 +258,8 @@ var svg_node = xml
 
 //this line below makes the svgs a part of the svg on the page, inserts them into it
 
+
+
 				svg
 				  .node()
 				  .appendChild(svg_node)
@@ -298,8 +269,9 @@ var svg_node = xml
 //opened the svgs in a text editor and deleted those attributes, got that idea from http://stackoverflow.com/questions/3120739/resizing-svg-in-html
 
 //added preserveAspectRatio="xMinYMin meet" to svg, forgot I could do it through code --> .attr("preserveAspectRatio", "xMinYMin meet")
-//learnt exactly what xMinyMin does from http://tutorials.jenkov.com/svg/svg-viewport-view-box.html  
+//learnt what xMinyMin does from http://tutorials.jenkov.com/svg/svg-viewport-view-box.html  
 //all this doesn't matter for the d3 code here though, just putting it here as a reminder that I manually edited the svgs outside the d3 code to make the d3 code here work. Note to self: next time, avoid manual editing, you can add/change attributes through the code here
+
 
       d3
        .select("#path5161")
@@ -309,6 +281,33 @@ var svg_node = xml
           .duration(750)
           .attr("fill-opacity","1")
           ;
+
+});
+
+
+//when i first tried adding svgs below, the font for the page number was getting rendered wrong, one workaround
+// is to convert the text in inkscape/illustrator to a shape (object to path), then you won't be 
+//screwed over by different browsers rendering the font differently. got the idea from https://github.com/JChemPaint/jchempaint/wiki/The-svg-font-problem-and-its-solution
+
+//appending svgs is a pain, manually edited the svgs to add an id pg_number and then did this d3.select('svg:pg_number'), I've got to find a way to do this through code without changing the svg by hand
+
+d3.xml("graphics/pg_1_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
 
 });
 
@@ -345,6 +344,26 @@ var svg_node = xml
               .duration(750)
               .attr("fill-opacity","1")
               ;
+
+});
+
+d3.xml("graphics/pg_2_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
 
 });
 
@@ -477,6 +496,26 @@ svg
         .attr("y", function(d) { return y(d.venue_country) + y.bandwidth()/2; })
         .attr("dy",".35em")
         .text(function(d) { return (d3.format(".0f")(d.won_toss_bat_percent) +" %"); })
+        ;
+
+});
+
+d3.xml("graphics/pg_3_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
         ;
 
 });
@@ -695,6 +734,26 @@ arrangeLabels();
 
 });
 
+d3.xml("graphics/pg_4_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
+
+});
+
 }
 
 
@@ -730,6 +789,26 @@ svg
               .attr("fill-opacity","1")
               ;
 
+
+});
+
+d3.xml("graphics/pg_5_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
 
 });
 
@@ -866,6 +945,26 @@ data.sort(function(a, b) {
         .attr("y", function(d) { return y(d.venue_country) + y.bandwidth()/2; })
         .attr("dy",".35em")
         .text(function(d) { return (d3.format(".0f")(d.toss_won_match_won_percent) +" %"); })
+        ;
+
+});
+
+d3.xml("graphics/pg_6_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
         ;
 
 });
@@ -1090,6 +1189,26 @@ arrangeLabels();
 
 });
 
+d3.xml("graphics/pg_7_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
+
+});
+
 }
 
 
@@ -1130,6 +1249,25 @@ svg
 
 });
 
+d3.xml("graphics/pg_8_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
+
+});
 
 }
 
@@ -1382,6 +1520,26 @@ function sec_9(){ //how team toss choices have changed over the years
 
     });
 
+d3.xml("graphics/pg_9_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
+
+});
+
 }                  
 
 
@@ -1520,6 +1678,25 @@ data.sort(function(a, b) {
 
 });
 
+d3.xml("graphics/pg_10_min.svg", function(error, xml) {
+        if (error) {console.log(error); return;}
+
+var svg_node = xml
+                .getElementsByTagName("svg")[0]
+                ;
+
+      svg
+          .node()
+          .appendChild(svg_node)
+          ;
+
+      d3
+        .select("svg#pg_number")
+        .attr("x", width - 80)
+        .attr('y', height - 20)
+        ;
+
+});
 
 
 } //sec_10 closing brace
