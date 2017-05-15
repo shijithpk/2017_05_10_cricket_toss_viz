@@ -10,7 +10,7 @@ Used a modified version of Adam Pearce's [Graph-Scroll.js library](1wheel.github
 
 Apart from the Graph-Scroll.js library, I also used Gregor Aisch's [d3 jetpack](https://github.com/gka/d3-jetpack) and the [d3-geo microlibrary](https://github.com/d3/d3-geo).
 
-If you want to know how I analysed the data, please look at the [ipython/jupyter notebook](ipython_notebook_used_for_analysis.ipynb) in the repository.
+If you want to know how I analysed the data, the [ipython/jupyter notebook](ipython_notebook_used_for_analysis.ipynb) I used is available in the repository. 
 
 Here are the sources and credits for the images used:
 * Image of people tossing a coin -- [Flickr](https://www.flickr.com/photos/publicresourceorg/26848722413/)
@@ -19,5 +19,4 @@ Here are the sources and credits for the images used:
 * Image of batsman holding hands aloft (actually Sachin Tendulkar) -- [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tendulkar_closup.jpg)
 * Maps of Australia and New Zealand -- [Naturalearthdata.com](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
 
-
-
+Finally, big thank you to Rustam Roy and Agnisheik Chatterjee of WION for helping me make sense of pitch conditions and their impact on Test matches.
