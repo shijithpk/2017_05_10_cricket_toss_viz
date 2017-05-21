@@ -19,4 +19,4 @@ Here are the sources and credits for the images used:
 * Image of batsman holding hands aloft (actually Sachin Tendulkar) -- [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tendulkar_closup.jpg)
 * Maps of Australia and New Zealand -- [Naturalearthdata.com](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
 
-Finally, thanks to Rustam Roy and Agnisheik Chatterjee of WION for helping me understand how pitch conditions impact Test matches, and to Saurabh Singh of Open magazine for helping me improve some of the images.
+Finally, thanks to Rustam Roy and Agnisheik Chatterjee of WION for helping me understand how pitch conditions impact Test matches, and also to Saurabh Singh of OPEN magazine for helping me improve some of the images.
